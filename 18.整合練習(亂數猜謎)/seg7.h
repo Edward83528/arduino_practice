@@ -40,13 +40,13 @@ void seg7_x4_display(int digit, int num) {
 byte mask;
 
   //先關掉四顆七段顯示器
-  for(int i=8; i<12; i++) digitalWrite(seg7_x4_FirstPin+i, LOW);
+  for(int i=8; i<12; i++) digitalWrite(seg7_x4_FirstPin+i, HIGH);
   //再致能指定的七段顯示器
   switch(digit) {
-    case 0: digitalWrite(seg7_x4_FirstPin+8, HIGH); break;
-    case 1: digitalWrite(seg7_x4_FirstPin+9, HIGH); break;
-	case 2: digitalWrite(seg7_x4_FirstPin+10, HIGH); break;
-	case 3: digitalWrite(seg7_x4_FirstPin+11, HIGH); break;
+    case 0: digitalWrite(seg7_x4_FirstPin+8, LOW); break;
+    case 1: digitalWrite(seg7_x4_FirstPin+9, LOW); break;
+	case 2: digitalWrite(seg7_x4_FirstPin+10, LOW); break;
+	case 3: digitalWrite(seg7_x4_FirstPin+11, LOW); break;
   }
   //顯示數字
   for(int i=0; i<8; i++)  {

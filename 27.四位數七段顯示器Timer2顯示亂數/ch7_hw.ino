@@ -6,7 +6,8 @@ int count;
 int flag = 0;
 
 void setup() {
-
+	// 使用四位數的七段顯示器來顯示0000~9999的亂數，當PC端輸入任一按鍵後，就換下一組亂數，數字不能閃爍。
+	// 由pin 2 到 pin 13，對應到 a, b, c, d, e, f, g, h, 0, 1, 2, 3
     Serial.begin(9600);
 
     seg7_x4_init(2); // 初始化接腳(D2~D13)

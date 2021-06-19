@@ -14,7 +14,7 @@ void loop() {
 
     }
     if (digitalRead(ButtonPin) == LOW && flag == 1) {
-        digitalWrite(LedPin, !digitalRead(LedPin));
+        digitalWrite(LedPin, !digitalRead(LedPin)); // 反轉LED燈狀態
         flag = 0;
     }
 

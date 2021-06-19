@@ -57,7 +57,7 @@ void loop() {
           
             digitalWrite(colPins[j], LOW);
             scanVal = digitalRead(rowPins[i]);
-            if (scanVal == LOW) {
+            if (scanVal == LOW) { // 如果輸入值是低電位
                 Serial.println(keymap[i][j]);
                 delay(200);
                 digitalWrite(colPins[j], HIGH);
